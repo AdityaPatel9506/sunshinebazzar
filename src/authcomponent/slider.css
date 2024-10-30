@@ -1,0 +1,66 @@
+.custom-slider {
+    position: relative;
+    overflow: hidden; /* Hide overflow */
+    width: 95%; /* Set to a smaller percentage of the container */
+    max-width: 95%; /* Maximum width */
+    height: 90%; /* Set a fixed height for the slider */
+    margin: 0 auto; /* Center the slider */
+    border: 2px solid black; /* Optional: visual boundary */
+}
+
+.slider-content {
+    display: flex; /* Align slides in a row */
+    transition: transform 0.5s ease; /* Smooth transition */
+    height: 100%; /* Full height of the slider */
+}
+
+.slide {
+    min-width: 100%; /* Full width for each slide */
+    height: 100%; /* Full height */
+    position: relative; /* Allow positioning of text over image */
+}
+
+/* Style for the image */
+.slide-image {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Cover the area while maintaining aspect ratio */
+}
+
+.slide-text {
+    position: absolute; /* Position text over the image */
+    bottom: 20px; /* Position text 20px from the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center adjustment */
+    color: white; /* White text */
+    text-align: center; /* Center text */
+    padding: 10px; /* Optional: add some padding */
+    background: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background */
+    border-radius: 5px; /* Optional: border radius */
+}
+
+
+/* Updated unique class for buttons */
+.custom-slider-button {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust position */
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    border: none; /* No border */
+    padding: 10px; /* Padding */
+    cursor: pointer; /* Pointer cursor */
+    border-radius: 50%; /* Circular button */
+}
+
+.custom-slider-prev {
+    left: 10px; /* Position for previous button */
+}
+
+.custom-slider-next {
+    right: 10px; /* Position for next button */
+}
+
+/* Additional styles for buttons on hover */
+.custom-slider-button:hover {
+    background: rgba(255, 255, 255, 0.8); /* Lighter background on hover */
+}

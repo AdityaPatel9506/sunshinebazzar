@@ -1,0 +1,43 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+
+    width: 100vw;
+ 
+    justify-content: center;
+}
+
+.navbar-links{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.navbar-links a {
+    text-decoration: none; /* Remove underline from the link */
+    color: black; /* Change link color */
+    font-size: 12.99px;
+  
+    padding-left: 20px;
+    padding: 10px 15px; /* Add padding for space around text */
+    transition: color 0.3s ease; /* Smooth text color transition */
+    position: relative; /* Position relative for the pseudo-element */
+    z-index: 1; /* Ensure the link text is above the background */
+  }
+  .navbar-links a::before {
+    content: ""; /* Create a pseudo-element */
+    position: absolute; /* Position it absolutely */
+    top: 0; /* Align with the top of the link */
+    left: -5px; /* Extend 5px to the left */
+    right: -5px; /* Extend 5px to the right */
+    bottom: 0; /* Fill height */
+    background-color: #0e0e0e17; /* Background color */
+    border-radius: 17.5px; /* Match with the link's border radius */
+    z-index: -1; /* Send it behind the link */
+    transition: opacity 0.3s ease; /* Smooth transition */
+    opacity: 0; /* Initially hidden */
+  }
+  .navbar-links a:hover::before {
+    opacity: 1; /* Show background on hover */
+  }
+  

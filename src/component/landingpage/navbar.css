@@ -1,0 +1,350 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-weight: bold;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  height: fit-content;
+  
+  align-items: center;
+  justify-content: space-around;
+  align-self: center;
+}
+
+.header-logo {
+  border: 2px solid gray;
+  width: 100px;
+}
+
+#search-category{
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+ 
+  border: 2px solid red;
+}
+
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #fff; /* Background color of the header */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative; /* Make the header relative for positioning children */
+  }
+  
+  .header-logo img {
+    height: 40px; /* Logo height */
+  }
+  
+  #header-category-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: fit-content;
+    width: fit-content;
+    padding: 5px 10px;
+    border: 2px solid transparent; /* Make border transparent initially */
+    border-radius: 25px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s ease; /* Smooth transition */
+  }
+  
+  #header-category-div:hover {
+    background-color: #0e0e0e17; /* Background color on hover */
+  }
+  
+  #header-category-div span {
+    margin-left: 10px; /* Spacing between image and text */
+    color: #000; /* Text color */
+    font-size: 12.99px;
+    text-decoration: none; /* Remove text decoration */
+  }
+  
+  #header-category-div img {
+    height: 24px; /* Icon height */
+    width: 24px; /* Icon width */
+  }
+  
+  .tooltip {
+    display: none; /* Hide the tooltip initially */
+  }
+  
+  .header-icon {
+    position: relative; /* Position for the tooltip */
+    margin-left: 20px; /* Spacing between icons */
+  }
+  
+  .header-icon:hover .tooltip {
+    display: block; /* Show tooltip on hover */
+    position: absolute;
+    bottom: 100%; /* Position above the icon */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    background-color: #333; /* Background color of the tooltip */
+    color: #fff; /* Text color of the tooltip */
+    padding: 5px 10px; /* Padding for the tooltip */
+    border-radius: 4px; /* Rounded corners for the tooltip */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow for tooltip */
+    white-space: nowrap; /* Prevent text from wrapping */
+    z-index: 100; /* Ensure tooltip is above other elements */
+  }
+  
+  /* Tooltip styling for the category dropdown */
+  .tooltipStyle {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 1000;
+    width: 150px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease;
+  }
+  
+  .header-icon img {
+    transition: transform 0.3s ease; /* Smooth scaling transition */
+  }
+  
+  .header-icon:hover img {
+    transform: scale(1.1); /* Scale up icon on hover */
+  }
+  
+  .tooltip-container {
+    position: absolute; /* Position relative to the nearest positioned ancestor */
+    background-color: white; /* Background color */
+    border: 1px solid #e0e0e0; /* Light gray border */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    border-radius: 8px; /* Rounded corners */
+    z-index: 1000; /* Higher z-index to appear above other elements */
+    width: 200px; /* Fixed width for the tooltip */
+    padding: 10px 0; /* Padding for the list */
+    margin-top: 10px; /* Space below the tooltip */
+    
+}
+
+.tooltip-list {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+
+}
+
+.tooltip-item {
+    padding: 10px 15px; /* Spacing around each item */
+    color: #333; /* Darker text color */
+    font-size: 14px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.2s; /* Smooth background transition */
+    font-weight: 200;
+}
+
+.tooltip-item:hover {
+    background-color: #f5f5f5; /* Light gray background on hover */
+    text-decoration: underline;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+#header-search {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  align-items: stretch; /* Use stretch to fill height */
+  height: 50px; /* Set a fixed height */
+  border: 2px solid black;
+  margin-left: 50px;
+  border-radius: 35px;
+  overflow: hidden;
+}
+
+#header-search-bar {
+  flex-grow: 1; /* Allow it to take up remaining space */
+}
+
+#header-search-bar input {
+  width: 100%; /* Full width of the bar */
+  height: 100%;
+  border: none;
+  font-size: 18px;
+  font-weight: 200;
+  
+  padding: 10px; /* Space inside the input */
+  box-sizing: border-box;
+}
+
+#header-search-bar input:focus {
+  outline: none; /* Remove focus outline */
+}
+
+#header-search-button {
+  display: flex;
+  align-items: center; /* Center the icon vertically */
+  justify-content: center; /* Center the icon horizontally */
+  align-self: center;
+  width: 50px; /* Fixed width */
+  height: 80%; /* Initial height */
+  background-color: #f1641e; /* Background color */
+  border: none; /* Remove border */
+  border-radius: 50px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin-right: 0; /* No margin on the right */
+  transition: height 0.5s ease, border-radius 0.3s ease; /* Smooth transition */
+}
+
+#header-search-button:hover {
+  height: 100%; /* Increase height to fill the container on hover */
+  border-radius: 0; /* Remove rounding to fill the container */
+}
+#header-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-width: fit-content;
+}
+#header-icons a {
+  text-decoration: none; /* Remove underline from the link */
+  color: black; /* Change link color */
+  font-size: 12.99px;
+  padding: 10px 15px; /* Add padding for space around text */
+  transition: color 0.3s ease; /* Smooth text color transition */
+  position: relative; /* Position relative for the pseudo-element */
+  z-index: 1; /* Ensure the link text is above the background */
+}
+
+#header-icons a::before {
+  content: ""; /* Create a pseudo-element */
+  position: absolute; /* Position it absolutely */
+  top: 0; /* Align with the top of the link */
+  left: -5px; /* Extend 5px to the left */
+  right: -5px; /* Extend 5px to the right */
+  bottom: 0; /* Fill height */
+  background-color: #0e0e0e17; /* Background color */
+  border-radius: 17.5px; /* Match with the link's border radius */
+  z-index: -1; /* Send it behind the link */
+  transition: opacity 0.3s ease; /* Smooth transition */
+  opacity: 0; /* Initially hidden */
+}
+
+#header-icons a:hover::before {
+  opacity: 1; /* Show background on hover */
+}
+
+#header-icons div {
+  margin-left: 20px;
+}
+.header-icon {
+  height: 35px; /* Set icon height */
+  width: 35px; /* Set icon width */
+  display: flex;
+  align-items: center; /* Center the icon vertically */
+  justify-content: center; /* Center the icon horizontally */
+  position: relative; /* Position relative for absolute child */
+}
+
+.header-icon::before {
+  content: ""; /* Ensure pseudo-element has content */
+  position: absolute; 
+  top: -7.5px; /* Adjust to center it */
+  left: -7.5px; /* Adjust to center it */
+  height: 50px; 
+  width: 50px; 
+  background-color: transparent; /* Start with transparent */
+  border-radius: 50%; /* Round shape */
+  z-index: 0; /* Place it behind the image */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.header-icon:hover::before {
+  background-color: #d7e6f5; /* Set the hover background color */
+  z-index: 1; /* Bring it above the image */
+}
+
+.header-icon img {
+  width: 80%; /* Keep image size the same */
+  height: auto; /* Maintain aspect ratio */
+  z-index: 2; /* Ensure image stays above the pseudo-element */
+  position: relative; /* Make sure the image is positioned correctly */
+}
+
+
+.tooltip2 {
+  visibility: hidden; /* Hidden by default */
+  background-color: #2f466c; /* Tooltip background color */
+  color: #fff; /* Text color */
+  margin-top: 5px;
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px; /* Space inside tooltip */
+  position: absolute; /* Position tooltip */
+  top: calc(100% + 5px); /* Position below the icon with a little space */
+  left: 50%; /* Center it horizontally */
+  transform: translateX(-50%); /* Adjust for centering */
+  z-index: 1; /* Show above other elements */
+  transition: visibility 0s, opacity 0.5s ease; /* Smooth appearance */
+  opacity: 0; /* Hidden initially */
+  text-align: center; /* Center the text */
+}
+
+.header-icon:hover .tooltip2 {
+  visibility: visible; /* Show on hover */
+  opacity: 1; /* Fade in */
+  
+}
+
+@media screen and (max-width: 768px) {
+  .header-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Align to the start */
+  }
+
+  #header-search {
+    width: 100%; /* Make search bar full width */
+    margin-top: 10px; /* Space above the search bar */
+  }
+
+  #header-icons {
+    justify-content: flex-start; /* Align icons to the left */
+    margin-top: 10px; /* Space above icons */
+    width: 100%; /* Full width for icons */
+  }
+  
+  #header-category-div {
+    margin-top: 10px; /* Add space above category div */
+  }
+}

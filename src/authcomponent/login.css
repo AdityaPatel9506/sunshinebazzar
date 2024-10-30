@@ -1,0 +1,142 @@
+.login-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    margin-top: 25px;
+    height: 90vh; /* Full height */
+    overflow: hidden; /* Prevent overflow */
+    background-color: white; /* White background */
+}
+
+.custom-slider {
+    position: relative;
+    overflow: hidden; /* Hide overflow */
+    width: 100%; /* Adjust width as needed to fit alongside login form */
+    height: 98%; /* Full height of the container */
+    margin: 0; /* Remove margin for better alignment */
+
+}
+
+.slider-content {
+    display: flex; /* Align slides in a row */
+    transition: transform 0.5s ease; /* Smooth transition */
+    height: 100%; /* Full height of the slider */
+}
+
+.slide {
+    min-width: 100%; /* Full width for each slide */
+    height: 100%; /* Full height */
+    position: relative; /* Allow positioning of text over image */
+}
+
+/* Style for the image */
+.slide-image {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Cover the area while maintaining aspect ratio */
+}
+
+.slide-text {
+    position: absolute; /* Position text over the image */
+    bottom: 20px; /* Position text 20px from the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center adjustment */
+    color: white; /* White text */
+    text-align: center; /* Center text */
+    padding: 10px; /* Optional: add some padding */
+    background: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background */
+    border-radius: 5px; /* Optional: border radius */
+}
+
+/* Change the button style */
+button {
+    background-color: #f1641e; /* Orange background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px; /* Add padding */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+button:hover {
+    /* background-color: #d0531c;  */
+}
+
+.login-form {
+    display: flex;
+ 
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    padding: 20px; /* Add some padding */
+    background-color: #fff; /* White background */
+}
+
+.login-form h2 {
+    margin-bottom: 25px;
+    color: #f1641e; /* Orange text for header */
+}
+
+.form-group {
+    margin-bottom: 25px; /* Add spacing between form groups */
+}
+
+.form-group form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 10px; /* Add some padding */
+    width: 100%; /* Full width for inputs */
+    box-sizing: border-box; /* Include padding in width */
+    border: 1px solid #f1641e; /* Orange border for inputs */
+    border-radius: 4px; /* Rounded corners for inputs */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column; /* Stack the slider and form */
+    }
+
+    .custom-slider {
+        width: 100%; /* Full width on mobile */
+        height: 200px; /* Set a height for slider on mobile */
+    }
+
+    .login-form {
+        width: 100%; /* Full width on mobile */
+        border: none; /* Remove border on mobile for simplicity */
+    }
+
+    .slide {
+        height: auto; /* Adjust height for mobile */
+    }
+}
+
+/* Updated unique class for buttons */
+.custom-slider-button {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust position */
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    border: none; /* No border */
+    padding: 10px; /* Padding */
+    cursor: pointer; /* Pointer cursor */
+    border-radius: 50%; /* Circular button */
+}
+
+.custom-slider-prev {
+    left: 10px; /* Position for previous button */
+}
+
+.custom-slider-next {
+    right: 10px; /* Position for next button */
+}
+
+/* Additional styles for buttons on hover */
+.custom-slider-button:hover {
+    background: rgba(255, 255, 255, 0.8); /* Lighter background on hover */
+}

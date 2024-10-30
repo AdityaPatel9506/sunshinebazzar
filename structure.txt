@@ -1,0 +1,58 @@
++-------------------+
+|       Client      |
+|  (Web/Mobile App) |
++-------------------+
+          |
+          v
++-------------------------+
+|         Services         |
++-------------------------+
+          |
+          v
++-------------------+       +-------------------+       +-------------------+
+|    Admin Panel    |       | Vendor Dashboard  |       |      User         |
++-------------------+       +-------------------+       +-------------------+
+| POST /admin/vendors       | POST /vendor/products     | POST /users/register|
+| GET  /admin/vendors/:id   | GET  /vendor/orders       | POST /users/login   |
+| GET  /admin/products      | GET  /vendor/dashboard    | GET  /users/:id     |
+| POST /admin/homepage      | PUT  /vendor/products/:id | PUT  /users/:id     |
+| PUT  /admin/products/:id  | DELETE /vendor/products   | DELETE /users/:id   |
+| DELETE /admin/vendors/:id |                           |                    |
++-------------------+       +-------------------+       +-------------------+
+          |
+          v
++-------------------+       +-------------------+
+|     Product       |       |       Order       |
++-------------------+       +-------------------+
+| POST /products    |       | POST /orders      |
+| GET  /products    |       | GET  /orders      |
+| GET  /products/:id|       | GET  /orders/:id  |
+| PUT  /products/:id|       +-------------------+
+| DELETE /products  |
++-------------------+
+          |
+          v
++-------------------+       +-------------------+
+|     Banner        |       |      Trend        |
++-------------------+       +-------------------+
+| POST /banners     |       | GET  /trends      |
+| GET  /banners     |       +-------------------+
++-------------------+
+          |
+          v
++-------------------+       +-------------------+
+|     Category      |       |       Gift        |
++-------------------+       +-------------------+
+| GET  /categories  |       | GET  /gifts/popular|
+| GET  /categories/ |
+|     featured      |
++-------------------+
+          |
+          v
++-------------------+       +-------------------+
+|       Cart        |       |     Checkout      |
++-------------------+       +-------------------+
+| POST /cart        |       | POST /checkout    |
+| GET  /cart        |       | GET  /orders      |
+| DELETE /cart/:id  |       | GET  /orders/:id  |
++-------------------+       +-------------------+

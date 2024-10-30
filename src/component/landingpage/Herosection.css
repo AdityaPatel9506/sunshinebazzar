@@ -1,0 +1,112 @@
+/* General section styling */
+.trends-section {
+    margin-top: 5px;
+    padding: 20px;
+    border-top: 2px solid gray;
+    color: black;
+    position: relative;
+    background: linear-gradient(to bottom, #F19D27 50%, transparent 50%);
+    overflow: hidden; /* Ensure no overflow issues */
+    height: fit-content; /* Set a height for the section */
+}
+
+
+/* Half background color (covers only the top half) */
+
+
+/* Header text styling */
+.trends-header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.trends-header h1 {
+    font-size: 28px;
+    color: #2c2c2c;
+}
+
+/* Bubbles container */
+.bubbles-container {
+    display: flex;
+    justify-content: center;
+}
+
+.trends-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+
+/* Individual trend item */
+.trend-item {
+    margin: 15px;
+    text-align: center;
+    flex-basis: 20%;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect to enlarge the image */
+.trend-item:hover {
+    transform: scale(1.01);
+}
+
+/* Trend link styling */
+.trend-link {
+    text-decoration: none;
+    color: black;
+}
+
+/* Image container and image */
+.trend-image-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect on image container */
+/* Hover effect on image container */
+.trend-link:hover .trend-image-container {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add shadow at the bottom */
+}
+
+
+.trend-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Trend text */
+.trend-text {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Hover effect for underlining the text */
+.trend-link:hover .trend-text {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 767px) {
+    .trend-item {
+        flex-basis: 45%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .trend-item {
+        flex-basis: 90%;
+    }
+}

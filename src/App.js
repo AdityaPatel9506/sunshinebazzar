@@ -1,24 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+// Import your components
+import Navbar from './component/landingpage/Navbar';
+import SecondNav from './component/landingpage/secondnav';
+import Homepage from './component/landingpage/Homepage';
+import LoginPage from './authcomponent/login';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <ConditionalSecondNav />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/login" element={<LoginPage />} />
+        {/* Add more routes as needed */}
+      </Routes>
+    </Router>
+  );
+}
+
+function ConditionalSecondNav() {
+  const location = useLocation();
+  const hideOnPaths = ['/login', '/signup']; // Add more paths as needed
+
+  return (
+    !hideOnPaths.includes(location.pathname) && <SecondNav />
   );
 }
 

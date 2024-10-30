@@ -1,0 +1,74 @@
+.category-module {
+    display: flex;
+    margin: 16px auto; /* Space above and auto margins for horizontal centering */
+    width: 90%;
+    height: fit-content;
+    flex-direction: column;
+    align-self: center;
+}
+
+.category-container {
+    display: flex;
+    flex-wrap: wrap; 
+    padding: 0;
+    list-style: none;
+    justify-content: center; 
+    margin-top: 20px;
+}
+
+.category-item {
+    display: flex;
+    margin: 10px; 
+    flex: 1 1 120px; 
+    max-width: 200px; 
+}
+
+.category-listing {
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%; /* Ensure full width */
+}
+
+.category-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px; /* Space below the image */
+    border-radius: 8px; /* Round the container */
+    overflow: hidden; /* Hide overflow for rounded corners */
+    transition: box-shadow 0.2s; /* Transition for shadow effect */
+}
+
+.image-container:hover {
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4); /* Shadow on hover */
+    
+}
+
+.rounded-image {
+    border-radius: 8px; /* Ensure the image has the same radius */
+    width: 100%; /* Full width of the card */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.category-title {
+    color: #333;
+    font-size: 30px; /* Adjust font size if needed */
+}
+
+.category-name {
+    margin-left: 5px;
+    height: 24px;
+}
+
+/* Optional: Media queries for further responsiveness */
+@media (max-width: 600px) {
+    .category-item {
+        flex: 1 1 100px; /* Even smaller cards on very small screens */
+        max-width: 150px; /* Further reduce max width */
+    }
+}

@@ -1,0 +1,122 @@
+#editors-first-pick {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 16px auto;
+    width: 90%;
+    height: fit-content;
+    align-self: center;
+   
+    
+}
+
+.editors-first-pick-card-anchor {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-self: self-end;
+}
+.editors-first-pick-card-anchor p {
+    font-family: "Roboto";
+    font-weight: 300;
+}
+
+.editors-first-pick-card {
+    margin: 10px;
+    width: 25%;
+    height: 200px;
+    
+}
+
+
+
+#editors-first-pick-a img {
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+}
+
+#editors-first-pick-a {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+  
+    align-items: center; 
+}
+
+#editors-first-pick-a a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    font-size: large;
+}
+
+#editors-first-pick-a img {
+    transition: transform 0.2s; /* Smooth transition for the transform effect */
+}
+
+#editors-first-pick-a:hover img {
+    transform: translateX(5px); /* Translate image 5px to the left on hover */
+}
+
+
+.editors-first-pick-product-card {
+    position: relative; /* Enable positioning for child elements */
+    margin-top: 25px;
+    width: 25%; /* Adjust as needed for responsiveness */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+/* Image style */
+.editors-first-pick-product-image {
+    width: 100%;
+    height: 100%; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the area */
+
+}
+
+/* Wishlist icon positioning */
+.wishlist-icon-button {
+    position: absolute; /* Position it over the image */
+    top: 10px; /* Position at the top */
+    right: 10px; /* Position to the right */
+    background: transparent; /* No background */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    z-index: 1; /* Ensure it appears above the image */
+    opacity: 0;
+}
+
+.wishlist-icon-button img {
+    width: 25px; /* Set the width of the icon */
+    height: 25px; /* Set the height of the icon */
+   
+}
+
+/* Price positioning */
+.editors-first-pick-product-price {
+    position: absolute; /* Position it over the image */
+    bottom: 10px; /* Position at the bottom */
+    left: 10px; /* Position to the left */
+    color: black; /* Change color for better visibility */
+    background: white; /* Optional: background for better contrast */
+    padding: 2px 5px; /* Optional: padding for better spacing */
+    border: 0.5px solid black;
+    border-radius: 20px;
+    
+
+    z-index: 1; /* Ensure it appears above the image */
+    opacity: 0;
+
+}
+.editors-first-pick-product-card:hover .wishlist-icon-button,
+.editors-first-pick-product-card:hover .editors-first-pick-product-price {
+    opacity: 1; /* Show on hover */
+}
+.editors-first-pick-product-image:hover{
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); /* Add shadow */
+    transition: box-shadow 0.3s ease;
+}
